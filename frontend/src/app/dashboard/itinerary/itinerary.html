@@ -1,0 +1,19 @@
+<section class="panel">
+  <header class="panel-header">
+    <h2>Itinerario</h2>
+    <p class="muted">Actividades destacadas del viaje</p>
+  </header>
+  <div class="timeline">
+    <article class="timeline-item" *ngFor="let item of itinerary">
+      <div class="timeline-meta">
+        <span class="timeline-day">{{ item.day }}</span>
+        <span class="timeline-time">{{ item.time }}</span>
+      </div>
+      <div class="timeline-content">
+        <h3>{{ item.title }}</h3>
+        <p class="location">{{ item.location }}</p>
+        <p class="notes">{{ item.notes }}</p>
+      </div>
+    </article>
+  </div>
+</section>

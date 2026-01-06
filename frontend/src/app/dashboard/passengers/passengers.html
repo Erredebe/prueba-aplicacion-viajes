@@ -1,0 +1,28 @@
+<section class="panel">
+  <header class="panel-header">
+    <h2>Pasajeros</h2>
+    <p class="muted">{{ passengers.length }} pasajeros confirmados</p>
+  </header>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Asiento</th>
+          <th>Documento</th>
+          <th>Estado</th>
+          <th>Programa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let passenger of passengers">
+          <td>{{ passenger.name }}</td>
+          <td>{{ passenger.seat }}</td>
+          <td>{{ passenger.document }}</td>
+          <td>{{ passenger.status }}</td>
+          <td>{{ passenger.loyalty }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
