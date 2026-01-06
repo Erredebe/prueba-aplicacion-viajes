@@ -8,11 +8,11 @@
       </div>
     </div>
     <nav class="nav">
-      <a class="nav-link active" href="#">Dashboard</a>
-      <a class="nav-link" href="#">Reservas</a>
-      <a class="nav-link" href="#">Pasajeros</a>
-      <a class="nav-link" href="#">Itinerario</a>
-      <a class="nav-link" href="#">Reportes</a>
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a>
+      <a class="nav-link" routerLink="/reservas" routerLinkActive="active">Reservas</a>
+      <a class="nav-link" routerLink="/pasajeros" routerLinkActive="active">Pasajeros</a>
+      <a class="nav-link" routerLink="/itinerario" routerLinkActive="active">Itinerario</a>
+      <a class="nav-link" routerLink="/reportes" routerLinkActive="active">Reportes</a>
     </nav>
     <div class="sidebar-footer">
       <p class="muted">Agente asignado</p>
@@ -22,31 +22,6 @@
   </aside>
 
   <main class="main-content">
-    <header class="topbar">
-      <div>
-        <p class="muted">Bienvenido de vuelta</p>
-        <h2>{{ title() }}</h2>
-      </div>
-      <div class="topbar-actions">
-        <div class="status-pill">
-          <span class="dot"></span>
-          Última actualización: hace 2h
-        </div>
-        <button class="secondary-btn">Exportar</button>
-      </div>
-    </header>
-
-    <section class="dashboard-section">
-      <app-trip-dashboard></app-trip-dashboard>
-    </section>
-
-    <section class="dashboard-grid">
-      <app-trip-details></app-trip-details>
-      <app-passengers></app-passengers>
-    </section>
-
-    <section class="dashboard-section">
-      <app-itinerary></app-itinerary>
-    </section>
+    <router-outlet></router-outlet>
   </main>
 </div>

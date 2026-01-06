@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { DashboardModule } from './dashboard/dashboard.module';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [DashboardModule],
+  imports: [RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('Dashboard de Viajes');
-}
+export class App {}
